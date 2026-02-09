@@ -23,10 +23,8 @@
             <p>Obejrzyj zwiastuny i zarezerwuj bilety już teraz!</p>
             
             <?php
-            // Połączenie z bazą danych
             include 'conn.php';
             
-            // Pobierz filmy z bazy danych
             $sql = "SELECT tytul, zdjecie, opis FROM filmy ORDER BY id_filmu DESC LIMIT 10";
             $result = $conn->query($sql);
             
@@ -34,13 +32,11 @@
                 <div class="carousel-container">
                     <div class="carousel-track" id="movieCarousel">
                         <?php 
-                        // Pętla przez filmy - dodajemy podwójnie dla płynnego przejścia
                         $movies = [];
                         while($row = $result->fetch_assoc()) {
                             $movies[] = $row;
                         }
                         
-                        // Dodajemy filmy dwa razy dla płynnego przejścia
                         for ($i = 0; $i < 2; $i++):
                             foreach($movies as $movie): 
                         ?>
@@ -83,36 +79,28 @@
     </section>
 
     <script>
-        // Skrypt dla karuzeli
         let currentPosition = 0;
-        let slideWidth = 320; // Szerokość jednego slajdu + margines
+        let slideWidth = 320; 
         let autoScrollInterval;
         const carouselTrack = document.getElementById('movieCarousel');
         
         function moveCarousel(direction) {
-            // Zatrzymaj autoscroll podczas manualnego użytkowania
             stopAutoScroll();
-            
-            // Oblicz maksymalną pozycję
+
             const maxPosition = -slideWidth * (carouselTrack.children.length / 2);
-            
-            // Aktualizuj pozycję
+
             currentPosition += direction * slideWidth;
-            
-            // Jeśli doszliśmy do końca, wróć na początek
+
             if (currentPosition > 0) {
                 currentPosition = maxPosition;
             }
-            
-            // Jeśli cofnęliśmy się za początek, idź do końca
+
             if (currentPosition < maxPosition) {
                 currentPosition = 0;
             }
-            
-            // Zastosuj transformację
+
             carouselTrack.style.transform = `translateX(${currentPosition}px)`;
-            
-            // Wznów autoscroll po 5 sekundach
+
             setTimeout(startAutoScroll, 5000);
         }
         
@@ -120,7 +108,7 @@
             if (autoScrollInterval) clearInterval(autoScrollInterval);
             autoScrollInterval = setInterval(() => {
                 moveCarousel(-1);
-            }, 3000); // Przesuń co 3 sekundy
+            }, 3000);
         }
         
         function stopAutoScroll() {
@@ -129,12 +117,10 @@
                 autoScrollInterval = null;
             }
         }
-        
-        // Rozpocznij autoscroll po załadowaniu strony
+
         document.addEventListener('DOMContentLoaded', () => {
             startAutoScroll();
-            
-            // Zatrzymaj autoscroll przy najechaniu myszką
+
             carouselTrack.addEventListener('mouseenter', stopAutoScroll);
             carouselTrack.addEventListener('mouseleave', startAutoScroll);
         });

@@ -70,8 +70,8 @@
                     </div>
                     
                     <div class="carousel-controls">
-                        <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">‹</button>
-                        <button class="carousel-btn next-btn" onclick="moveCarousel(1)">›</button>
+                        <button class="carousel-btn prev-btn" onclick="moveCarousel(1)">‹</button>
+                        <button class="carousel-btn next-btn" onclick="moveCarousel(-1)">›</button>
                     </div>
                 </div>
             <?php else: ?>

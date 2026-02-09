@@ -1,4 +1,3 @@
-/* Dodaj te style do istniejącego pliku style-index.css */
 
 .hero {
     background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), 
@@ -47,7 +46,6 @@
     box-shadow: 0 4px 12px rgba(81, 7, 8, 0.3);
 }
 
-/* Sekcja karuzeli filmów */
 .movies-carousel-section {
     padding: 60px 0px;
     background-color: #0f172a;
@@ -73,7 +71,6 @@
     font-size: 1.1em;
 }
 
-/* Kontener karuzeli */
 .carousel-container {
     position: relative;
     overflow: hidden;
@@ -81,7 +78,6 @@
     margin: 0 auto;
 }
 
-/* Tor karuzeli */
 .carousel-track {
     display: flex;
     gap: 20px;
@@ -89,13 +85,11 @@
     will-change: transform;
 }
 
-/* Pojedynczy slajd */
 .carousel-slide {
     flex: 0 0 auto;
     width: 300px;
 }
 
-/* Karta filmu */
 .movie-card {
     background: #1e293b;
     border-radius: 12px;
@@ -112,7 +106,6 @@
     box-shadow: 0 8px 25px rgba(225, 29, 72, 0.2);
 }
 
-/* Obraz filmu */
 .movie-image {
     width: 100%;
     height: 400px;
@@ -129,7 +122,6 @@
     font-size: 1em;
 }
 
-/* Informacje o filmie */
 .movie-info {
     padding: 20px;
     flex-grow: 1;
@@ -151,7 +143,6 @@
     flex-grow: 1;
 }
 
-/* Przyciski kontroli karuzeli */
 .carousel-controls {
     position: absolute;
     top: 50%;
@@ -186,7 +177,6 @@
     transform: scale(1.1);
 }
 
-/* Komunikat gdy brak filmów */
 .no-movies {
     text-align: center;
     color: #94a3b8;
@@ -196,7 +186,6 @@
     border-radius: 8px;
 }
 
-/* Responsywność */
 @media (max-width: 768px) {
     .movies-carousel-section h2 {
         font-size: 1.8em;

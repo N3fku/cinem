@@ -105,3 +105,10 @@ body {
 .auth-links a:hover {
     text-decoration: underline;
 }
+p{
+    text-align: center;
+    margin-top: 5px;
+}
+.success{
+    color: rgb(10, 199, 10);
+}

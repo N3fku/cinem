@@ -1,5 +1,3 @@
-/* Dodaj te style do istniejącego pliku style-index.css */
-
 .hero {
     background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), 
                 url('https://mail.google.com/mail/u/0?ui=2&ik=6cc9e612e2&attid=0.1&permmsgid=msg-f:1856377876456094941&th=19c32dd7d70f3cdd&view=fimg&fur=ip&permmsgid=msg-f:1856377876456094941&sz=s0-l75-ft&attbid=ANGjdJ-zz5a4O-5QQ_XI0Ng58UtbS8KCom5VfN6VM3sAnzJcAHeAhra55fQif5etD-OF5mJjbw2aT2Zg2plYCzIgLDUgdZ1d4wG1hyPvhn-lCoc2H_9TYXkeXKY9SZI&disp=emb&realattid=ii_mlauh2m10&zw');
@@ -49,13 +47,12 @@
 
 /* Sekcja karuzeli filmów */
 .movies-carousel-section {
-    padding: 60px 20px;
     background-color: #0f172a;
     color: #ffffff;
 }
 
 .movies-carousel-section .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -194,39 +191,4 @@
     padding: 40px;
     background: #1e293b;
     border-radius: 8px;
-}
-
-/* Responsywność */
-@media (max-width: 768px) {
-    .movies-carousel-section h2 {
-        font-size: 1.8em;
-    }
-    
-    .carousel-slide {
-        width: 250px;
-    }
-    
-    .movie-image {
-        height: 350px;
-    }
-}
-
-@media (max-width: 480px) {
-    .movies-carousel-section {
-        padding: 40px 15px;
-    }
-    
-    .carousel-slide {
-        width: 220px;
-    }
-    
-    .movie-image {
-        height: 300px;
-    }
-    
-    .carousel-btn {
-        width: 35px;
-        height: 35px;
-        font-size: 1.2em;
-    }
 }

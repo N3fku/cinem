@@ -29,7 +29,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <li><a href="admin.php"><i class="fas fa-cog"></i> Panel admina</a></li>
                 <?php endif; ?>
                 
-                <li><a href="#kontakt"><i class="fas fa-phone"></i> Kontakt</a></li>
+                <li><a onclick="location.href='#footer'"><i class="fas fa-phone"></i> Kontakt</a></li>
             </ul>
       <div class="auth-buttons">
     <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']): ?>
